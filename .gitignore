@@ -246,3 +246,9 @@ dmypy.json
 .prof
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,python
+
+# 학습img데이터
+/rock_scissor_paper_classifier/test/
+/rock_scissor_paper_classifier/train/
+/rock_scissor_paper_classifier/validation/
+.idea
