@@ -95,8 +95,8 @@ x_test_norm = x_test/255.0   # 입력은 0~1 사이의 값으로 정규화
 
 
 # 모델 설계
-n_channel_1 = 15
-n_channel_2 = 20
+n_channel_1 = 384
+n_channel_2 = 128  # 128: loss: 0.9009 - accuracy: 0.6657
 n_dense = 30
 
 model = keras.models.Sequential()
