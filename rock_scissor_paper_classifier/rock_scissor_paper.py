@@ -1,15 +1,11 @@
-from PIL import Image
 import os, glob
 import numpy as np
 import tensorflow as tf
+
+from PIL import Image
 from tensorflow import keras
+from sklearn.model_selection import train_test_split
 
-
-"""
-1. 이미지 분류기 모델이 성공적으로 만들어졌는가?           트레이닝이 정상적으로 수행되었음
-2. 오버피팅을 극복하기 위한 적절한 시도가 있었는가?        데이터셋의 다양성, 정규화 등의 시도가 적절하였음
-3. 분류모델의 test accuracy가 기준 이상 높게 나왔는가?   60% 이상 도달하였음
-"""
 
 # GPU out of memory 문제로 코드 추가
 gpus = tf.config.experimental.list_physical_devices('GPU')
@@ -40,7 +36,8 @@ def change_file_size(path):
     print(f"{path} 이미지 resize 완료!")
 
 
-# resize train, test data
+# train, test data의 사이즈를 변경해주는 함수
+# 테스트할 때 1번만 진행되면 되기 때문에 위해 함수로 묶어주었다.
 def resize_train_test():
     for x in ['scissor', 'rock', 'paper']:
         train_path = 'train/' + x
@@ -83,26 +80,24 @@ def load_data(img_path, len_data):
     return imgs, labels
 
 
+# train data를 라벨링한 후 정규화 시켜준다.
 image_dir_path = os.getenv("HOME") + "/aiffel_project/rock_scissor_paper_classifier/train"
-(x_train, y_train) = load_data(image_dir_path, 3300)
+(x_train, y_train) = load_data(image_dir_path, 2370)
 x_train_norm = x_train/255.0   # 입력은 0~1 사이의 값으로 정규화
 
-print("x_train shape: {}".format(x_train.shape))
-print("y_train shape: {}".format(y_train.shape))
+# train data를 train, valid로 나눈다.(비율 70:30)
+x_train, x_valid, y_train, y_valid = train_test_split(x_train_norm, y_train, test_size=0.3, random_state=25)
 
+# test data를 라벨링한 후 정규화 시켜준다.
 image_dir_path = os.getenv("HOME") + "/aiffel_project/rock_scissor_paper_classifier/test"
-(x_test, y_test) = load_data(image_dir_path, 300)
+(x_test, y_test) = load_data(image_dir_path, 990)
 x_test_norm = x_test/255.0   # 입력은 0~1 사이의 값으로 정규화
 
-print("x_test shape: {}".format(x_test.shape))
-print("y_test shape: {}".format(y_test.shape))
 
-
-# 네트워크 설계
+# 모델 설계
 n_channel_1 = 15
 n_channel_2 = 20
 n_dense = 30
-n_train_epoch = 10
 
 model = keras.models.Sequential()
 model.add(keras.layers.Conv2D(n_channel_1, (3,3), activation='relu', input_shape=(28,28,3)))
@@ -113,16 +108,16 @@ model.add(keras.layers.Flatten())
 model.add(keras.layers.Dense(n_dense, activation='relu'))
 model.add(keras.layers.Dense(3, activation='softmax'))
 
-model.summary()
+model.compile(optimizer=keras.optimizers.Adam(learning_rate=0.001),
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
 
 
 # 모델 학습
-model.compile(optimizer=keras.optimizers.Adam(learning_rate=0.001), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-model.fit(x_train_norm, y_train, epochs=n_train_epoch)
+n_train_epoch = 10
+model.fit(x_train, y_train, epochs=n_train_epoch, validation_data=(x_valid, y_valid), batch_size=100)
 
-
-# 테스트
-# 모델 시험
-test_loss, test_accuracy = model.evaluate(x_test_norm, y_test, verbose=2)
+# 모델 평가하기
+test_loss, test_accuracy = model.evaluate(x_test_norm, y_test, verbose=2)  # verbose/ 0:silent 1:progress bar 2:one line per epoch
 print("test_loss: {} ".format(test_loss))
 print("test_accuracy: {}".format(test_accuracy))
