@@ -96,13 +96,14 @@ x_test_norm = x_test/255.0   # 입력은 0~1 사이의 값으로 정규화
 
 # 모델 설계
 n_channel_1 = 384
-n_channel_2 = 128  # 128: loss: 0.9009 - accuracy: 0.6657
+n_channel_2 = 128
 n_dense = 30
 
 model = keras.models.Sequential()
 model.add(keras.layers.Conv2D(n_channel_1, (3,3), activation='relu', input_shape=(28,28,3)))
 model.add(keras.layers.MaxPooling2D(2,2))
 model.add(keras.layers.Conv2D(n_channel_2, (3,3), activation='relu'))
+model.add(keras.layers.BatchNormalization())
 model.add(keras.layers.MaxPooling2D((2,2)))
 model.add(keras.layers.Flatten())
 model.add(keras.layers.Dense(n_dense, activation='relu'))
@@ -114,7 +115,7 @@ model.compile(optimizer=keras.optimizers.Adam(learning_rate=0.001),
 
 
 # 모델 학습
-n_train_epoch = 10
+n_train_epoch = 20
 model.fit(x_train, y_train, epochs=n_train_epoch, validation_data=(x_valid, y_valid), batch_size=100)
 
 # 모델 평가하기
