@@ -252,3 +252,4 @@ dmypy.json
 /rock_scissor_paper_classifier/train/
 /rock_scissor_paper_classifier/validation/
 .idea
+/camera_sticker/models
