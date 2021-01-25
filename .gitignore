@@ -254,3 +254,5 @@ dmypy.json
 .idea
 /camera_sticker/models
 /data
+/speech_recognition/models
+/speech_recognition/models1
