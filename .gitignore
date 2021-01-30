@@ -248,11 +248,7 @@ dmypy.json
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,python
 
 # 학습img데이터
-/rock_scissor_paper_classifier/test/
-/rock_scissor_paper_classifier/train/
-/rock_scissor_paper_classifier/validation/
 .idea
-/camera_sticker/models
 /data
-/speech_recognition/models
-/speech_recognition/models1
+/e5_speech_recognition/models
+test.py
