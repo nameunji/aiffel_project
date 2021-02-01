@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrity Result</title>
+    <style>
+        header, main {
+            margin: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>나와 가장 닮은 연예인은 바로!</h1>
+    </header>
+    <main class="parent">
+        <div>
+            <h1>{{img_link.star.name}}</h1>
+            <img src="{{ url_for('static', filename=img_link.star.link) }}">
+            {% if True %}
+            {% endif %}
+        </div>
+    </main>
+</body>
+</html>
