@@ -258,3 +258,5 @@ kaggle_kakr_housing/data
 kaggle_kakr_housing/submission.csv
 speech_recognition/models
 face_embedding/static
+human_segmentation/models
+human_segmentation/images
