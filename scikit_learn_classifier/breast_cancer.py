@@ -1,5 +1,5 @@
 from sklearn.datasets import load_breast_cancer
-from e2_scikit_learn_classifier.learn import learn_predict
+from scikit_learn_classifier.learn import learn_predict
 
 
 # 데이터 준비

@@ -254,3 +254,7 @@ dmypy.json
 /e5_speech_recognition/models
 test.py
 /e7_face_embedding/static
+kaggle_kakr_housing/data
+kaggle_kakr_housing/submission.csv
+speech_recognition/models
+face_embedding/static

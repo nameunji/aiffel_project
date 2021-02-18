@@ -1,6 +1,6 @@
 import warnings
 from sklearn.datasets import load_wine
-from e2_scikit_learn_classifier.learn import learn_predict
+from scikit_learn_classifier.learn import learn_predict
 
 
 warnings.filterwarnings("ignore")
