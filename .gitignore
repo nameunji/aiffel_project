@@ -260,3 +260,7 @@ speech_recognition/models
 face_embedding/static
 human_segmentation/models
 human_segmentation/images
+dcgan_newimage/cifar10/generated_samples
+dcgan_newimage/cifar10/training_checkpoints
+dcgan_newimage/cifar10/training_history
+dcgan_newimage/fashion
