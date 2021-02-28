@@ -264,3 +264,4 @@ dcgan_newimage/cifar10/generated_samples
 dcgan_newimage/cifar10/training_checkpoints
 dcgan_newimage/cifar10/training_history
 dcgan_newimage/fashion
+stock_prediction/data
