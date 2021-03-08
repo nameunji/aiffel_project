@@ -265,3 +265,11 @@ dcgan_newimage/cifar10/training_checkpoints
 dcgan_newimage/cifar10/training_history
 dcgan_newimage/fashion
 stock_prediction/data
+news_summarization/data
+news_summarization/news_summary_more.csv
+chatbot/ChatbotData.csv
+chatbot/cornell_movie_dialogs_corpus.zip.crdownload
+chest_xray/test
+chest_xray/train
+chest_xray/val
+chest_xray/__MACOSX
