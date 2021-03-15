@@ -12,3 +12,10 @@
 |8. 영화 추천하기 | [link](https://github.com/nameunji/aiffel_project/blob/main/exp/[E-08]movielens.ipynb) | [folder](https://github.com/nameunji/aiffel_project/tree/main/recommend_data) |
 |9. 나의 첫 캐글 경진대회| [link](https://github.com/nameunji/aiffel_project/blob/main/exp/[E-09]kaggle.ipynb) | [folder](https://github.com/nameunji/aiffel_project/tree/main/kaggle_kakr_housing) |
 |10. 인물사진 만들기| [link](https://github.com/nameunji/aiffel_project/blob/main/exp/[E-10]segmentation.ipynb) | [folder](https://github.com/nameunji/aiffel_project/tree/main/human_segmentation) |
+|11. 뉴스기사 요약하기| [link](https://github.com/nameunji/aiffel_project/blob/main/exp/[E-11]news_summarization.ipynb) | [folder](https://github.com/nameunji/aiffel_project/tree/main/news_summarization) |
+|12. CIFAR-10 이미지 생성하기| [link](https://github.com/nameunji/aiffel_project/blob/main/exp/[E-12]cifar-10.ipynb) | [folder](https://github.com/nameunji/aiffel_project/tree/main/dcgan_newimage) |
+|13. 주식 예측| [link](https://github.com/nameunji/aiffel_project/blob/main/exp/[E-13]stock_prediction.ipynb) | [folder](https://github.com/nameunji/aiffel_project/tree/main/stock_prediction) |
+|14. x-ray 사진 폐렴진단| [link](https://github.com/nameunji/aiffel_project/blob/main/exp/[E-14]chest_xray.ipynb) | [folder](https://github.com/nameunji/aiffel_project/tree/main/chest_xray) |
+|15. 트랜스포머로 만드는 대화형 챗봇| [link](https://github.com/nameunji/aiffel_project/blob/main/exp/[E-15]chatbot.ipynb) | [folder](https://github.com/nameunji/aiffel_project/tree/main/chatbot) |
+|16. 흐린 사진을 선명하게| [link](https://github.com/nameunji/aiffel_project/blob/main/exp/[E-16]super_resolution.ipynb) | [folder](https://github.com/nameunji/aiffel_project/tree/main/super_resolution) |
+|17. GRU 영화추천| [link](https://github.com/nameunji/aiffel_project/blob/main/exp/[E-17]sbr.ipynb) | [folder](https://github.com/nameunji/aiffel_project/tree/main/yoochoose-data) |

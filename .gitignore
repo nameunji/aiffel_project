@@ -273,3 +273,9 @@ chest_xray/test
 chest_xray/train
 chest_xray/val
 chest_xray/__MACOSX
+yoochoose-data/ml-1m
+yoochoose-data/processed
+yoochoose-data/yoochoose-buys.dat
+yoochoose-data/yoochoose-clicks.dat
+yoochoose-data/yoochoose-test.dat
+yoochoose-data/dataset-README.txt
