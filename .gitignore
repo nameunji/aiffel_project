@@ -280,3 +280,5 @@ yoochoose-data/yoochoose-clicks.dat
 yoochoose-data/yoochoose-test.dat
 yoochoose-data/dataset-README.txt
 ocr_python/my_google_api_key.json
+bert_qna/data
+bert_qna/models
