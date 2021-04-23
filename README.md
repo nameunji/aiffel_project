@@ -9,6 +9,7 @@
 |-|-|-|
 |1| [네이버 영화리뷰 감성분석](https://github.com/nameunji/aiffel_project/tree/main/sp_tokenizer) | [code](https://github.com/nameunji/aiffel_project/blob/main/sp_tokenizer/[GoingDeeper]1_tokenizer_naver_review.ipynb) |
 |2| [Vocabulary Size에 따른 모델 성능 비교](https://github.com/nameunji/aiffel_project/tree/main/reuters_classifiaction) | [code](https://github.com/nameunji/aiffel_project/blob/main/reuters_classifiaction/[GoingDeeper]2_reuters_classification.ipynb) |
+|3| [WEAT를 통해 데이터 편향성 측정](https://github.com/nameunji/aiffel_project/tree/main/weat) | [code](https://github.com/nameunji/aiffel_project/blob/main/weat/[GoingDeeper]3_weat.ipynb) |
 
 ## Computer Vision
 |No|Project|Code|
