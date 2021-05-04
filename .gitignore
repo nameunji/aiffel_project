@@ -290,3 +290,12 @@ conditional_generation/pokemon_pix2pix_dataset
 conditional_generation/cityscapes
 sp_tokenizer/data
 weat/data
+gd_01_text_preprocess/khaiii_wrapper/
+gd_01_text_preprocess/MeMecab-ko-for-Google-Colab/
+gd_05_word_embedding/w2v
+gd_10_transformer/data
+
+*/data/
+*.model
+*.vocab
+*.tsv
