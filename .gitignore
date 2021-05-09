@@ -294,7 +294,9 @@ gd_01_text_preprocess/khaiii_wrapper/
 gd_01_text_preprocess/MeMecab-ko-for-Google-Colab/
 gd_05_word_embedding/w2v
 gd_10_transformer/data
-
+gd_14_babi_memory_net/e-28-korean
+gd_14_babi_memory_net/tasks_1-20_v1-2
+gd_14_babi_memory_net/*.h5
 */data/
 *.model
 *.vocab
