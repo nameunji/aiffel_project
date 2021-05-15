@@ -301,3 +301,6 @@ gd_14_babi_memory_net/*.h5
 *.model
 *.vocab
 *.tsv
+gd_16_bert_pretrain/models
+gd_16_bert_pretrain/data
+gd_16_bert_pretrain/*.memmap
