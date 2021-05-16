@@ -305,3 +305,4 @@ gd_16_bert_pretrain/models
 gd_16_bert_pretrain/data
 gd_16_bert_pretrain/*.memmap
 gd_17_transformers/
+gd_18_transformers/
